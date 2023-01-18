@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModels="clr-namespace:Code.MVVM.ViewModels"
+             x:Class="Code.MVVM.Views.PersonView"
+             x:DataType="{x:Type ViewModels:PersonViewModel}"
+             Title="PersonView">
+
+    <VerticalStackLayout
+        Spacing="14"
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
+
+        <Label 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Text="{Binding Person.Name}"
+            />
+
+        <Label 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Text="Welcome to .NET MAUI!"
+            />
+
+        <Slider
+            Minimum="0"
+            Maximum="100"
+            HorizontalOptions="Center"
+            Value="{Binding Person.Age}"
+            />
+
+        <DatePicker
+            HorizontalOptions="Center"
+            Date="{Binding Person.BirthDate}" />
+
+        <Switch
+            HorizontalOptions="Center"
+            IsToggled="{Binding Person.Married}" />
+
+        <Entry
+            HorizontalOptions="Center"
+            Text="{Binding Person.Weight}"/>
+
+        <TimePicker
+            HorizontalOptions="Center"
+            Time="{Binding Person.Lunchtime}"/>
+
+    </VerticalStackLayout>
+</ContentPage>
